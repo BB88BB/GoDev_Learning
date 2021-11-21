@@ -22,8 +22,8 @@ func main() {
 }
 ```
 
-## http Response struct
-<img src="https://github.com/BB88BB/GoDev_Learning/blob/main/4.interface/http/response__struct.png" width="472" height="182" />
+## Http Response struct
+<img src="https://github.com/BB88BB/GoDev_Learning/blob/main/4.interface/http/response__struct.png" width="708" height="273" />
 
 ## Reader interface
 - Reader interface: read information from outside data source into application
