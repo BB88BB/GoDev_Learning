@@ -28,7 +28,7 @@ func main() {
 ## Reader interface
 - Reader interface: read information from outside data source into application
 - reason  
-<img src="https://github.com/BB88BB/GoDev_Learning/blob/main/4.interface/http/reason.png" width="218" height="215" />
+<img src="https://github.com/BB88BB/GoDev_Learning/blob/main/4.interface/http/reason.png" width="418" height="215" />
 
 - Reader interface  
 <img src="https://github.com/BB88BB/GoDev_Learning/blob/main/4.interface/http/reader_interface.png" width="412" height="213" />
