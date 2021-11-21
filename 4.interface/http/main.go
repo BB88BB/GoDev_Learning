@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+type logWriter struct{}
+
 func main() {
 	resp, err := http.Get("http://google.com")
 
@@ -15,9 +17,9 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println(resp)
+	// fmt.Println(resp)
 
-	// Method 1
+	// Print Body - Method 1
 	/*
 		//         type   #element
 		bs := make([]byte, 99999)
@@ -25,7 +27,15 @@ func main() {
 		fmt.Println(string(bs))
 	*/
 
-	// Method 2
-	io.Copy(os.Stdout, resp.Body)
+	// Print Body - Method 2
+	//io.Copy(os.Stdout, resp.Body)
 
+	lw := logWriter{}
+	io.Copy(lw, resp.Body)
+}
+
+func (logWriter) Write(bs []byte) (int, error) {
+	fmt.Println(string(bs))
+	fmt.Println("len of bs", len(bs))
+	return len(bs), nil
 }
