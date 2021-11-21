@@ -36,8 +36,14 @@ func main() {
 <img src="https://github.com/BB88BB/GoDev_Learning/blob/main/4.interface/http/read_implementation.png" width="694" height="370" />
 
 ## get body field
+- Method 1
 ```Go
+//         type   #element
 bs := make([]byte, 99999)
 resp.Body.Read(bs)
 fmt.Println(string(bs))
+```
+- Method 2 
+```Go
+io.Copy(os.Stdout, resp.Body)
 ```
